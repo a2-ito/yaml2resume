@@ -22,4 +22,4 @@ docker run -it --name resume -v ${PWD}:/work a2ito/yaml2resume ruby make_cv.rb -
 
 ## TODO
 
-[ ] github actions 化
+- [ ] github actions 化
