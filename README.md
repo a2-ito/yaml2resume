@@ -10,11 +10,16 @@ https://github.com/ikasam/docker-yaml_cv
 
 ## 使い方
 
+※本リポジトリをcloneする必要はありません。以下の手順通りコマンドを実行するだけです。
+
 ### 準備
-任意のカレントディレクトリに input.yaml を用意してください。本リポジトリの`input.yaml`をテンプレートとして使ってください。
+任意のカレントディレクトリに`input.yaml`を用意してください。本リポジトリの`input.yaml`をテンプレートとして使ってください。もちろんファイル名は任意です。
 
 ### 実行
 ```
 docker run -it --name resume -v ${PWD}:/work a2ito/yaml2resume ruby make_cv.rb -i /work/input.yaml -o /work/output.pdf
 ```
 
+## TODO
+
+[ ] github actions 化
