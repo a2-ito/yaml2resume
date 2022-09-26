@@ -20,6 +20,18 @@ https://github.com/ikasam/docker-yaml_cv
 docker run -it --name resume -v ${PWD}:/work a2ito/yaml2resume ruby make_cv.rb -i /work/input.yaml -o /work/output.pdf
 ```
 
+## 留意点
+現状、上記docker run で実行するとpdf化スクリプトのエラーメッセージがかき消されてしまいます。
+pdfがうまく出力されないな、と思ったら以下コマンドでデバッグしてみてください。
+
+```
+docker run -it --name resume -v ${PWD}:/work a2ito/yaml2resume sh
+```
+```
+ruby make_cv.rb -i /work/input.yaml -o /work/output.pdf
+```
+
 ## TODO
 
-- [ ] github actions 化
+- [ ] build の github actions 化
+- [ ] エラー時のメッセージを出力する
